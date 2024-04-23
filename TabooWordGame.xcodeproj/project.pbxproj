@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47B9DD682BD7930600BBF415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD672BD7930600BBF415 /* AppDelegate.swift */; };
+		47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD692BD7930600BBF415 /* SceneDelegate.swift */; };
+		47B9DD6C2BD7930600BBF415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD6B2BD7930600BBF415 /* ViewController.swift */; };
+		47B9DD6F2BD7930600BBF415 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 47B9DD6E2BD7930600BBF415 /* Base */; };
+		47B9DD712BD7930900BBF415 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47B9DD702BD7930900BBF415 /* Assets.xcassets */; };
+		47B9DD742BD7930900BBF415 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 47B9DD732BD7930900BBF415 /* Base */; };
+		47B9DD7F2BD7930900BBF415 /* TabooWordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD7E2BD7930900BBF415 /* TabooWordGameTests.swift */; };
+		47B9DD892BD7930900BBF415 /* TabooWordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */; };
+		47B9DD8B2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47B9DD7B2BD7930900BBF415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47B9DD5C2BD7930600BBF415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47B9DD632BD7930600BBF415;
+			remoteInfo = TabooWordGame;
+		};
+		47B9DD852BD7930900BBF415 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47B9DD5C2BD7930600BBF415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47B9DD632BD7930600BBF415;
+			remoteInfo = TabooWordGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		47B9DD642BD7930600BBF415 /* TabooWordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabooWordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD672BD7930600BBF415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		47B9DD692BD7930600BBF415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		47B9DD6B2BD7930600BBF415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		47B9DD6E2BD7930600BBF415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		47B9DD702BD7930900BBF415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		47B9DD732BD7930900BBF415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		47B9DD752BD7930900BBF415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabooWordGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD7E2BD7930900BBF415 /* TabooWordGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameTests.swift; sourceTree = "<group>"; };
+		47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabooWordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITests.swift; sourceTree = "<group>"; };
+		47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47B9DD612BD7930600BBF415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD772BD7930900BBF415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD812BD7930900BBF415 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		47B9DD5B2BD7930600BBF415 = {
+			isa = PBXGroup;
+			children = (
+				47B9DD662BD7930600BBF415 /* TabooWordGame */,
+				47B9DD7D2BD7930900BBF415 /* TabooWordGameTests */,
+				47B9DD872BD7930900BBF415 /* TabooWordGameUITests */,
+				47B9DD652BD7930600BBF415 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		47B9DD652BD7930600BBF415 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD642BD7930600BBF415 /* TabooWordGame.app */,
+				47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */,
+				47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		47B9DD662BD7930600BBF415 /* TabooWordGame */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD672BD7930600BBF415 /* AppDelegate.swift */,
+				47B9DD692BD7930600BBF415 /* SceneDelegate.swift */,
+				47B9DD6B2BD7930600BBF415 /* ViewController.swift */,
+				47B9DD6D2BD7930600BBF415 /* Main.storyboard */,
+				47B9DD702BD7930900BBF415 /* Assets.xcassets */,
+				47B9DD722BD7930900BBF415 /* LaunchScreen.storyboard */,
+				47B9DD752BD7930900BBF415 /* Info.plist */,
+			);
+			path = TabooWordGame;
+			sourceTree = "<group>";
+		};
+		47B9DD7D2BD7930900BBF415 /* TabooWordGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD7E2BD7930900BBF415 /* TabooWordGameTests.swift */,
+			);
+			path = TabooWordGameTests;
+			sourceTree = "<group>";
+		};
+		47B9DD872BD7930900BBF415 /* TabooWordGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */,
+				47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */,
+			);
+			path = TabooWordGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47B9DD632BD7930600BBF415 /* TabooWordGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGame" */;
+			buildPhases = (
+				47B9DD602BD7930600BBF415 /* Sources */,
+				47B9DD612BD7930600BBF415 /* Frameworks */,
+				47B9DD622BD7930600BBF415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TabooWordGame;
+			productName = TabooWordGame;
+			productReference = 47B9DD642BD7930600BBF415 /* TabooWordGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		47B9DD792BD7930900BBF415 /* TabooWordGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameTests" */;
+			buildPhases = (
+				47B9DD762BD7930900BBF415 /* Sources */,
+				47B9DD772BD7930900BBF415 /* Frameworks */,
+				47B9DD782BD7930900BBF415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47B9DD7C2BD7930900BBF415 /* PBXTargetDependency */,
+			);
+			name = TabooWordGameTests;
+			productName = TabooWordGameTests;
+			productReference = 47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		47B9DD832BD7930900BBF415 /* TabooWordGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameUITests" */;
+			buildPhases = (
+				47B9DD802BD7930900BBF415 /* Sources */,
+				47B9DD812BD7930900BBF415 /* Frameworks */,
+				47B9DD822BD7930900BBF415 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				47B9DD862BD7930900BBF415 /* PBXTargetDependency */,
+			);
+			name = TabooWordGameUITests;
+			productName = TabooWordGameUITests;
+			productReference = 47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		47B9DD5C2BD7930600BBF415 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					47B9DD632BD7930600BBF415 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					47B9DD792BD7930900BBF415 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 47B9DD632BD7930600BBF415;
+					};
+					47B9DD832BD7930900BBF415 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 47B9DD632BD7930600BBF415;
+					};
+				};
+			};
+			buildConfigurationList = 47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "TabooWordGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 47B9DD5B2BD7930600BBF415;
+			productRefGroup = 47B9DD652BD7930600BBF415 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47B9DD632BD7930600BBF415 /* TabooWordGame */,
+				47B9DD792BD7930900BBF415 /* TabooWordGameTests */,
+				47B9DD832BD7930900BBF415 /* TabooWordGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47B9DD622BD7930600BBF415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B9DD712BD7930900BBF415 /* Assets.xcassets in Resources */,
+				47B9DD742BD7930900BBF415 /* Base in Resources */,
+				47B9DD6F2BD7930600BBF415 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD782BD7930900BBF415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD822BD7930900BBF415 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		47B9DD602BD7930600BBF415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B9DD6C2BD7930600BBF415 /* ViewController.swift in Sources */,
+				47B9DD682BD7930600BBF415 /* AppDelegate.swift in Sources */,
+				47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD762BD7930900BBF415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B9DD7F2BD7930900BBF415 /* TabooWordGameTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47B9DD802BD7930900BBF415 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47B9DD8B2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift in Sources */,
+				47B9DD892BD7930900BBF415 /* TabooWordGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47B9DD7C2BD7930900BBF415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47B9DD632BD7930600BBF415 /* TabooWordGame */;
+			targetProxy = 47B9DD7B2BD7930900BBF415 /* PBXContainerItemProxy */;
+		};
+		47B9DD862BD7930900BBF415 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47B9DD632BD7930600BBF415 /* TabooWordGame */;
+			targetProxy = 47B9DD852BD7930900BBF415 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		47B9DD6D2BD7930600BBF415 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B9DD6E2BD7930600BBF415 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		47B9DD722BD7930900BBF415 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				47B9DD732BD7930900BBF415 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		47B9DD8C2BD7930900BBF415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		47B9DD8D2BD7930900BBF415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		47B9DD8F2BD7930900BBF415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabooWordGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		47B9DD902BD7930900BBF415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabooWordGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47B9DD922BD7930900BBF415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabooWordGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TabooWordGame";
+			};
+			name = Debug;
+		};
+		47B9DD932BD7930900BBF415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGameTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabooWordGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TabooWordGame";
+			};
+			name = Release;
+		};
+		47B9DD952BD7930900BBF415 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TabooWordGame;
+			};
+			name = Debug;
+		};
+		47B9DD962BD7930900BBF415 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX569Z937L;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TabooWordGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "TabooWordGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B9DD8C2BD7930900BBF415 /* Debug */,
+				47B9DD8D2BD7930900BBF415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B9DD8F2BD7930900BBF415 /* Debug */,
+				47B9DD902BD7930900BBF415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B9DD922BD7930900BBF415 /* Debug */,
+				47B9DD932BD7930900BBF415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47B9DD952BD7930900BBF415 /* Debug */,
+				47B9DD962BD7930900BBF415 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 47B9DD5C2BD7930600BBF415 /* Project object */;
+}
