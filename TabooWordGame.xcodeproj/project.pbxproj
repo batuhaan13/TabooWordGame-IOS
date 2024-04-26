@@ -16,6 +16,8 @@
 		47B9DD7F2BD7930900BBF415 /* TabooWordGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD7E2BD7930900BBF415 /* TabooWordGameTests.swift */; };
 		47B9DD892BD7930900BBF415 /* TabooWordGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */; };
 		47B9DD8B2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */; };
+		47B9DD982BD7979700BBF415 /* TabooWordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD972BD7979700BBF415 /* TabooWordModel.swift */; };
+		47B9DD9B2BD797CF00BBF415 /* TabooWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD9A2BD797CF00BBF415 /* TabooWordsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabooWordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITests.swift; sourceTree = "<group>"; };
 		47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		47B9DD972BD7979700BBF415 /* TabooWordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordModel.swift; sourceTree = "<group>"; };
+		47B9DD9A2BD797CF00BBF415 /* TabooWordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 		47B9DD662BD7930600BBF415 /* TabooWordGame */ = {
 			isa = PBXGroup;
 			children = (
-				47B9DD672BD7930600BBF415 /* AppDelegate.swift */,
-				47B9DD692BD7930600BBF415 /* SceneDelegate.swift */,
-				47B9DD6B2BD7930600BBF415 /* ViewController.swift */,
+				47B9DD992BD7979B00BBF415 /* Model */,
+				47B9DD9C2BD797EB00BBF415 /* Controller */,
+				47B9DD9D2BD797F900BBF415 /* ViewModel */,
 				47B9DD6D2BD7930600BBF415 /* Main.storyboard */,
+				47B9DD692BD7930600BBF415 /* SceneDelegate.swift */,
+				47B9DD672BD7930600BBF415 /* AppDelegate.swift */,
 				47B9DD702BD7930900BBF415 /* Assets.xcassets */,
 				47B9DD722BD7930900BBF415 /* LaunchScreen.storyboard */,
 				47B9DD752BD7930900BBF415 /* Info.plist */,
@@ -125,6 +131,30 @@
 				47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */,
 			);
 			path = TabooWordGameUITests;
+			sourceTree = "<group>";
+		};
+		47B9DD992BD7979B00BBF415 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD972BD7979700BBF415 /* TabooWordModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		47B9DD9C2BD797EB00BBF415 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD6B2BD7930600BBF415 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		47B9DD9D2BD797F900BBF415 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				47B9DD9A2BD797CF00BBF415 /* TabooWordsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				47B9DD6C2BD7930600BBF415 /* ViewController.swift in Sources */,
+				47B9DD982BD7979700BBF415 /* TabooWordModel.swift in Sources */,
 				47B9DD682BD7930600BBF415 /* AppDelegate.swift in Sources */,
 				47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */,
+				47B9DD9B2BD797CF00BBF415 /* TabooWordsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
