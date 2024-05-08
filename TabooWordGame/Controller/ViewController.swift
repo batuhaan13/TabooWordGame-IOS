@@ -58,6 +58,7 @@ class ViewController: UIViewController {
         updateTimer()
         
     }
+    
     func startTimer() {
         if !isTimerRunning {
             startTime = Date()
@@ -101,7 +102,7 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Zaman doldu!", message: "Oyuna devam etmek istiyor musun?", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
             
-            
+            self?.continueGame()
             self?.resetGame()
             self?.resetProgressView()
             self?.resetTimer()
@@ -122,6 +123,13 @@ class ViewController: UIViewController {
         present(alert,animated: true,completion: nil)
         
     }
+    func continueGame() {
+        resetGame()
+        resetProgressView()
+        resetTimer()
+        updatePassButton()
+    }
+
     func resetGame() {
         startTime = Date()
         startTimer()
@@ -195,7 +203,7 @@ class ViewController: UIViewController {
         let remainingAttempts = viewModel.passAttempts
         let imageIndex = 2 - remainingAttempts
         let passImages = ["pass32","pass31"]
-
+        
         if imageIndex >= 0 && imageIndex < passImages.count {
             let imageName = passImages[imageIndex]
             pasButton.setImage(UIImage(named: imageName), for: .normal)
@@ -206,6 +214,7 @@ class ViewController: UIViewController {
         
         
     }
+    
     
     func disablePassButton() {
         pasButton.isEnabled = false
