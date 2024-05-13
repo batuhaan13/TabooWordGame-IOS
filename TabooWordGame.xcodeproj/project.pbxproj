@@ -19,6 +19,7 @@
 		47B9DD982BD7979700BBF415 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD972BD7979700BBF415 /* Model.swift */; };
 		47B9DD9B2BD797CF00BBF415 /* TabooWordsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD9A2BD797CF00BBF415 /* TabooWordsViewModel.swift */; };
 		47BDB6532BEA1B2400D8D4C0 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BDB6522BEA1B2400D8D4C0 /* StartScreenViewController.swift */; };
+		47BDB6552BEBA82600D8D4C0 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BDB6542BEBA82600D8D4C0 /* HowToPlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		47B9DD972BD7979700BBF415 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		47B9DD9A2BD797CF00BBF415 /* TabooWordsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordsViewModel.swift; sourceTree = "<group>"; };
 		47BDB6522BEA1B2400D8D4C0 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
+		47BDB6542BEBA82600D8D4C0 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				47B9DD6B2BD7930600BBF415 /* ViewController.swift */,
 				47BDB6522BEA1B2400D8D4C0 /* StartScreenViewController.swift */,
+				47BDB6542BEBA82600D8D4C0 /* HowToPlayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				47B9DD6C2BD7930600BBF415 /* ViewController.swift in Sources */,
 				47B9DD982BD7979700BBF415 /* Model.swift in Sources */,
 				47B9DD682BD7930600BBF415 /* AppDelegate.swift in Sources */,
+				47BDB6552BEBA82600D8D4C0 /* HowToPlayViewController.swift in Sources */,
 				47BDB6532BEA1B2400D8D4C0 /* StartScreenViewController.swift in Sources */,
 				47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */,
 				47B9DD9B2BD797CF00BBF415 /* TabooWordsViewModel.swift in Sources */,

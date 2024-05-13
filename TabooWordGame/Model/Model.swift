@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct TabooWord {
+struct TabooWord: Equatable {
     let goalWord: String
     let tabooWords: [String]
+    
+   
 }

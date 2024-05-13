@@ -27,10 +27,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var goalWordLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var passButtonLabel: UIButton!
+    
     
     
     @IBOutlet var tabooWordLabels: [UILabel]!
@@ -46,17 +47,19 @@ class ViewController: UIViewController {
     var remainingTime = 30
     var score = 0
     var elapsedTime: TimeInterval = 0
+    
     private var viewModel = TabooWordsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+
         // Do any additional setup after loading the view.
         showRandomTabooWord()
         roundButtons()
         startTimer()
         updateTimer()
-        
     }
     
     func startTimer() {
@@ -77,17 +80,17 @@ class ViewController: UIViewController {
         
         let remainingTime = max(0, 30 - Int(totalElapsedTime))
         
-        timerLabel.text = "\(remainingTime)"
-        progressView.progress = Float(remainingTime) / 30.0
-        
-        if remainingTime == 0 {
+        if remainingTime <= 0 {
             timer?.invalidate()
             timer = nil
             showEndGameAlert()
-            
-            elapsedTime = 0
-            
+            return // Zaman bittiğinde güncelleme yapmayı durdur
         }
+        
+        progressView.progress = Float(remainingTime) / 30.0
+        
+        
+        
         
     }
     func resetProgressView() {
@@ -107,6 +110,9 @@ class ViewController: UIViewController {
             self?.resetProgressView()
             self?.resetTimer()
             self?.updatePassButton()
+            self?.resetScore()
+            self?.resetPass()
+            
         }
         let cancelAction = UIAlertAction(title: "Hayır", style: .cancel)
         
@@ -129,12 +135,21 @@ class ViewController: UIViewController {
         resetTimer()
         updatePassButton()
     }
-
+    func resetScore() {
+        scoreLabel.text = "0"
+    }
+    
     func resetGame() {
         startTime = Date()
+        
         startTimer()
         resetTimer()
         showRandomTabooWord()
+    }
+    func resetPass() {
+        viewModel.passAttempts = 3
+        pasButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        updatePassButton()
     }
     func resetTimer() {
         startTime = Date()
@@ -168,18 +183,16 @@ class ViewController: UIViewController {
         score = max(0, score + 1)
         viewModel.increaseScore()
         updateScoreLabel()
-        resetTimer()
         showRandomTabooWord()
         
         
     }
     func updateScoreLabel() {
-        scoreLabel.text = "Score: \(score)"
+        scoreLabel.text = "\(score)"
     }
     @IBAction func boomButtonTapped(_ sender: UIButton) {
         score = max(0, score - 1)
         updateScoreLabel()
-        resetTimer()
         showRandomTabooWord()
         
     }
@@ -188,40 +201,68 @@ class ViewController: UIViewController {
     @IBAction func pasButtonTapped(_ sender: UIButton) {
         if viewModel.passAttempts > 0 {
             viewModel.passAttempts -= 1
+            
             updatePassButton()
             showRandomTabooWord()
-            resetTimer()
             
             if viewModel.passAttempts == 0 {
-                disablePassButton()
                 showAlert(title: "Pas Hakkı Kalmadı", message: "Pas hakkınız bitti.")
                 
             }
         }
     }
     func updatePassButton() {
+        print("updatepassbutton called")
         let remainingAttempts = viewModel.passAttempts
-        let imageIndex = 2 - remainingAttempts
-        let passImages = ["pass32","pass31"]
         
-        if imageIndex >= 0 && imageIndex < passImages.count {
-            let imageName = passImages[imageIndex]
-            pasButton.setImage(UIImage(named: imageName), for: .normal)
-            
+        //pasButton.setTitle("Pas \(remainingAttempts)/3", for: .normal)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        let alertButton = UIAlertController(title: "Geri Dön", message: "Ana ekrana dönmek istiyor musun?", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
+        self?.performSegue(withIdentifier: "toBackVC", sender: nil)
         }
-        
-        
-        
-        
+        let cancelAction = UIAlertAction(title: "Hayır", style: .cancel)
+        alertButton.addAction(alertAction)
+        alertButton.addAction(cancelAction)
+        present(alertButton, animated: true)
     }
-    
-    
-    func disablePassButton() {
-        pasButton.isEnabled = false
-        pasButton.setTitleColor(.lightGray, for: .normal)
-        pasButton.setImage(UIImage(named: "pass30"), for: .normal)
-    }
-    
-    
     
 }
+
+
+
+
+
+
+/*
+ extension UILabel {
+ func startCountdownAnimation(duration: TimeInterval) {
+ guard var value = Int(self.text ?? "0") else { return }
+ 
+ Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+ value -= 1
+ 
+ if value < 0 {
+ timer.invalidate()
+ return
+ }
+ self.text = "\(value)"
+ if value <= 5 {
+ UIView.transition(with: self, duration: 0.5, options: [.transitionCrossDissolve], animations:  {
+ self.textColor = .red
+ }, completion: nil )
+ 
+ 
+ } else {
+ UIView.transition(with: self, duration: 0.5, options: [.transitionCrossDissolve], animations: {
+ self.textColor = .black
+ }, completion: nil )
+ }
+ }
+ self.textColor = .black
+ }
+ 
+ }
+ */

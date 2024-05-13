@@ -22,7 +22,7 @@ class TabooWordsViewModel {
         TabooWord(goalWord: "Gitar", tabooWords: ["Tell", "Akustik", "Elektro", "Çalmak", "Ses"]),
         TabooWord(goalWord: "Spor", tabooWords: ["Futbol", "Basketbol", "Voleybol", "Tenis", "Yüzme"]),
         TabooWord(goalWord: "Bisiklet", tabooWords: ["Tekerlek", "Pedal", "Fren", "Yol", "Sürmek"]),
-        TabooWord(goalWord: "Pasta", tabooWords: ["Un", "Krem", "Çikolata", "Kurabiye", "Tatl"]),
+        TabooWord(goalWord: "Pasta", tabooWords: ["Un", "Krem", "Çikolata", "Kurabiye", "Tatlı"]),
         TabooWord(goalWord: "Hastane", tabooWords: ["Doktor", "Hemşire", "Hasta", "Muayene", "Ameliyat"]),
         TabooWord(goalWord: "Güneş", tabooWords: ["Yıldız", "Sıcak", "Parlak", "Işık", "Gökyüzü"]),
         TabooWord(goalWord: "Araba", tabooWords: ["Tekerlek", "Yol", "Sürücü", "Motor", "Direksiyon"]),
@@ -48,19 +48,15 @@ class TabooWordsViewModel {
     
     private var previousTabooWordIndex: Int?
     
-    var currentTabooWord: TabooWord?
+    private var previousTabooWord: TabooWord?
     
     func getRandomTabooWord() -> TabooWord {
-        var randomIndex = Int.random(in: 0..<tabooWords.count)
+        var randomTabooWord: TabooWord
+        repeat {
+            randomTabooWord = tabooWords.randomElement()!
+        } while randomTabooWord == previousTabooWord
         
-        while let previousIndex = previousTabooWordIndex, randomIndex == previousIndex {
-            randomIndex = Int.random(in: 0..<tabooWords.count)
-        }
-        
-        previousTabooWordIndex = randomIndex
-        
-        let randomTabooWord = tabooWords[randomIndex]
-        currentTabooWord = randomTabooWord
+        previousTabooWord = randomTabooWord
         return randomTabooWord
     }
     

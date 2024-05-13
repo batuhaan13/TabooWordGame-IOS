@@ -16,51 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="taboo333" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-qS-1PE">
-                                <rect key="frame" x="42" y="227" width="308" height="460"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabubu" translatesAutoresizingMaskIntoConstraints="NO" id="eya-zY-ikP">
+                                <rect key="frame" x="53" y="144" width="286" height="628"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT0-ub-Qzz">
+                                <rect key="frame" x="72" y="251" width="248" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4un-eH-9S4">
                                 <rect key="frame" x="90" y="351" width="213" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2PZ-FN-fXn">
                                 <rect key="frame" x="90" y="416" width="213" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNI-6e-qkV">
                                 <rect key="frame" x="90" y="481" width="213" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYA-dN-9tJ">
                                 <rect key="frame" x="90" y="546" width="213" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yH-TF-Pse">
-                                <rect key="frame" x="90" y="611" width="213" height="57"/>
+                                <rect key="frame" x="90" y="611" width="213" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnP-PI-oIe">
                                 <rect key="frame" x="114" y="761.66666666666663" width="153" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="tintColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="pass33"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Pas 3/3 ">
+                                    <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="pasButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ii6-0O-a9p"/>
                                 </connections>
@@ -68,15 +77,17 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drj-zb-wGi">
                                 <rect key="frame" x="265" y="761" width="122" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="dogru2"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Doğru">
+                                    <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="correctButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSz-nQ-aNX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIc-Dq-TQE">
-                                <rect key="frame" x="31" y="68" width="57" height="47"/>
+                                <rect key="frame" x="31" y="68" width="44" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pause"/>
@@ -84,51 +95,42 @@
                                     <action selector="pauseResumeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMh-SU-cDP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-Uj-dtw">
-                                <rect key="frame" x="124" y="101" width="145" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="t3m-SE-qrE">
-                                <rect key="frame" x="42" y="165" width="308" height="4"/>
+                                <rect key="frame" x="36" y="165" width="308" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTY-u8-ob6">
                                 <rect key="frame" x="-21" y="742" width="161" height="80.333333333333371"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="tintColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="boom2" title=""/>
+                                <buttonConfiguration key="configuration" style="plain" title="Yanlış">
+                                    <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="boomButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KVg-LX-oNn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT0-ub-Qzz">
-                                <rect key="frame" x="72" y="251" width="248" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C8z-gm-K1D">
-                                <rect key="frame" x="314" y="69" width="52" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMI-Cu-GfG">
+                                <rect key="frame" x="317" y="61" width="60" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="return" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back2" title=""/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7V-OY-8Kv"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPl-Hm-V10">
-                                <rect key="frame" x="124" y="38" width="145" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-Uj-dtw">
+                                <rect key="frame" x="172" y="66" width="48" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="EE9-pa-8eo"/>
                     <connections>
@@ -136,25 +138,65 @@
                         <outlet property="correctButton" destination="drj-zb-wGi" id="e3S-zu-w46"/>
                         <outlet property="goalWordLabel" destination="bT0-ub-Qzz" id="oVl-GR-tJh"/>
                         <outlet property="pasButton" destination="SnP-PI-oIe" id="5sf-nw-Sen"/>
+                        <outlet property="passButtonLabel" destination="SnP-PI-oIe" id="YIU-WW-ddX"/>
                         <outlet property="pauseResumeButton" destination="HIc-Dq-TQE" id="4d1-rX-2yY"/>
                         <outlet property="progressView" destination="t3m-SE-qrE" id="Mfk-ec-x8G"/>
                         <outlet property="scoreLabel" destination="BBU-Uj-dtw" id="kBE-Wa-FJX"/>
-                        <outlet property="timerLabel" destination="nPl-Hm-V10" id="aJ2-47-iGr"/>
                         <outletCollection property="tabooWordLabels" destination="4un-eH-9S4" collectionClass="NSMutableArray" id="Vwq-1v-xsa"/>
                         <outletCollection property="tabooWordLabels" destination="2PZ-FN-fXn" collectionClass="NSMutableArray" id="mgj-wZ-c3o"/>
                         <outletCollection property="tabooWordLabels" destination="RNI-6e-qkV" collectionClass="NSMutableArray" id="DPj-OC-ADr"/>
                         <outletCollection property="tabooWordLabels" destination="BYA-dN-9tJ" collectionClass="NSMutableArray" id="NLi-z3-u2s"/>
                         <outletCollection property="tabooWordLabels" destination="8yH-TF-Pse" collectionClass="NSMutableArray" id="TA2-4y-KM6"/>
+                        <segue destination="Kf6-QM-KNc" kind="show" identifier="toBackVC" id="Zqi-Tt-aVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="562.59541984732823" y="-27.464788732394368"/>
+        </scene>
+        <!--How To Play View Controller-->
+        <scene sceneID="rrZ-UN-erW">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="FRI-Nm-yEh" customClass="HowToPlayViewController" customModule="TabooWordGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rWp-8D-0fy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ngh-ee-Hw1">
+                                <rect key="frame" x="50" y="217" width="292" height="388"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Taboo oyunu, oyuncuların belirli bir süre içinde yasaklı kelimeleri kullanmadan hedef kelimeyi tahmin ettiği eğlenceli bir oyundur.                                                  Her oyuncunun 30 saniye süresi vardır ve toplamda 3 pas hakkı bulunur.                                Oyuncular, süreyi durdurarak düşünme sürelerini uzatabilir ve yasaklı kelimeleri kullanmamaya dikkat etmelidir.                                    Oyunun amacı, hedef kelimeyi doğru tahmin ederek puan kazanmaktır.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-kF-a9k">
+                                <rect key="frame" x="16" y="62" width="58" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back4" title=""/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="FRI-Nm-yEh" eventType="touchUpInside" id="g2Q-yq-xIG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qEV-2y-lU6"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dMf-eL-fNa"/>
+                    <connections>
+                        <segue destination="Kf6-QM-KNc" kind="show" identifier="backVC" id="Ncr-0d-0Ad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahR-kH-jjB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16.030534351145036" y="707.04225352112678"/>
         </scene>
         <!--Start Screen View Controller-->
         <scene sceneID="5g6-rj-flx">
             <objects>
-                <viewController id="Kf6-QM-KNc" customClass="StartScreenViewController" customModule="TabooWordGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Kf6-QM-KNc" customClass="StartScreenViewController" customModule="TabooWordGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NeR-Nj-crk">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,6 +215,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="howtoplay2" title=""/>
+                                <connections>
+                                    <action selector="howToPlayButtonTapped:" destination="WPT-F9-ZaI" eventType="touchUpInside" id="8ns-IL-7dT"/>
+                                    <segue destination="FRI-Nm-yEh" kind="show" identifier="toHowToPlay" id="Nk7-n5-aIs"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="titlelabel3" translatesAutoresizingMaskIntoConstraints="NO" id="dqE-uc-GBB">
                                 <rect key="frame" x="55" y="145" width="283" height="65"/>
@@ -182,27 +228,33 @@
                         <viewLayoutGuide key="safeArea" id="uge-BI-tmz"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <navigationItem key="navigationItem" id="KpS-bE-k6d"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toTaboo" id="jpz-fg-SyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SM4-n0-H61" sceneMemberID="firstResponder"/>
+                <exit id="WPT-F9-ZaI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-663.35877862595419" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-688" y="-27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zqi-Tt-aVu"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="boom2" width="75" height="21"/>
-        <image name="dogru2" width="86" height="27"/>
+        <image name="back2" width="32" height="32"/>
+        <image name="back4" width="34" height="34"/>
         <image name="howtoplay2" width="204" height="35"/>
-        <image name="pass33" width="95" height="21"/>
-        <image name="pause" width="33" height="33"/>
-        <image name="return" catalog="system" width="128" height="102"/>
+        <image name="pause" width="35" height="35"/>
         <image name="starttaboo2" width="79" height="35"/>
-        <image name="taboo333" width="271" height="430"/>
+        <image name="tabubu" width="295" height="462"/>
         <image name="titlelabel3" width="280" height="29"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="underPageBackgroundColor">
+            <color red="0.70980392156862748" green="0.71764705882352942" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
