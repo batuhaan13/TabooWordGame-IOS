@@ -19,11 +19,11 @@ class StartScreenViewController: UIViewController {
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "toTaboo", sender: self)
+        performSegue(withIdentifier: "toStartSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toTaboo" {
+        if segue.identifier == "toStartSegue" {
             if let tabooGameVC = segue.destination as? ViewController {
                 
             }

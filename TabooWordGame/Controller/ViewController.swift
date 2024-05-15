@@ -212,10 +212,10 @@ class ViewController: UIViewController {
         }
     }
     func updatePassButton() {
-        print("updatepassbutton called")
         let remainingAttempts = viewModel.passAttempts
         
         //pasButton.setTitle("Pas \(remainingAttempts)/3", for: .normal)
+        //pasButton.titleLabel?.font = UIFont(name: "Optima-Regular", size: 26)
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
@@ -236,33 +236,4 @@ class ViewController: UIViewController {
 
 
 
-/*
- extension UILabel {
- func startCountdownAnimation(duration: TimeInterval) {
- guard var value = Int(self.text ?? "0") else { return }
- 
- Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
- value -= 1
- 
- if value < 0 {
- timer.invalidate()
- return
- }
- self.text = "\(value)"
- if value <= 5 {
- UIView.transition(with: self, duration: 0.5, options: [.transitionCrossDissolve], animations:  {
- self.textColor = .red
- }, completion: nil )
- 
- 
- } else {
- UIView.transition(with: self, duration: 0.5, options: [.transitionCrossDissolve], animations: {
- self.textColor = .black
- }, completion: nil )
- }
- }
- self.textColor = .black
- }
- 
- }
- */
+
