@@ -10,6 +10,7 @@
 		47A5E4002BF39BA500F5A615 /* TimeAndTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */; };
 		47A5E4012BF39BA500F5A615 /* TimeAndTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */; };
 		47A5E4022BF39BA500F5A615 /* TimeAndTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */; };
+		47A5E4042BF4A3CC00F5A615 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A5E4032BF4A3CC00F5A615 /* ScoreViewController.swift */; };
 		47B9DD682BD7930600BBF415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD672BD7930600BBF415 /* AppDelegate.swift */; };
 		47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD692BD7930600BBF415 /* SceneDelegate.swift */; };
 		47B9DD6C2BD7930600BBF415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B9DD6B2BD7930600BBF415 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndTourViewController.swift; sourceTree = "<group>"; };
+		47A5E4032BF4A3CC00F5A615 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		47B9DD642BD7930600BBF415 /* TabooWordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabooWordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9DD672BD7930600BBF415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B9DD692BD7930600BBF415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				47B9DD6B2BD7930600BBF415 /* ViewController.swift */,
+				47A5E4032BF4A3CC00F5A615 /* ScoreViewController.swift */,
 				47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */,
 				47BDB6522BEA1B2400D8D4C0 /* StartScreenViewController.swift */,
 				47BDB6542BEBA82600D8D4C0 /* HowToPlayViewController.swift */,
@@ -307,6 +310,7 @@
 				47A5E4002BF39BA500F5A615 /* TimeAndTourViewController.swift in Sources */,
 				47B9DD6A2BD7930600BBF415 /* SceneDelegate.swift in Sources */,
 				47B9DD9B2BD797CF00BBF415 /* TabooWordsViewModel.swift in Sources */,
+				47A5E4042BF4A3CC00F5A615 /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

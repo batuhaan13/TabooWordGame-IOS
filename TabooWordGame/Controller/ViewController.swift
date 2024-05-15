@@ -47,11 +47,14 @@ class ViewController: UIViewController {
     var remainingTime = 30
     var score = 0
     var elapsedTime: TimeInterval = 0
+    var selectedTour: Int = 0
+    var selectedTime: Int = 0
     
     private var viewModel = TabooWordsViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
 
@@ -78,16 +81,18 @@ class ViewController: UIViewController {
         let timePassedSinceStart = currentTime.timeIntervalSince(startTime)
         let totalElapsedTime = elapsedTime + timePassedSinceStart
         
-        let remainingTime = max(0, 30 - Int(totalElapsedTime))
+        let remainingTime = max(0, selectedTime - Int(totalElapsedTime))
+        
+        print("Remaining Time: ", remainingTime)
         
         if remainingTime <= 0 {
             timer?.invalidate()
             timer = nil
-            showEndGameAlert()
-            return // Zaman bittiğinde güncelleme yapmayı durdur
+            performSegue(withIdentifier: "NextVC", sender: nil)
+            return
         }
         
-        progressView.progress = Float(remainingTime) / 30.0
+        progressView.progress = Float(remainingTime) / Float(selectedTime)
         
         
         
@@ -214,20 +219,42 @@ class ViewController: UIViewController {
     func updatePassButton() {
         let remainingAttempts = viewModel.passAttempts
         
-        //pasButton.setTitle("Pas \(remainingAttempts)/3", for: .normal)
-        //pasButton.titleLabel?.font = UIFont(name: "Optima-Regular", size: 26)
+        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        isTimerRunning = false
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         let alertButton = UIAlertController(title: "Geri Dön", message: "Ana ekrana dönmek istiyor musun?", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
-        self?.performSegue(withIdentifier: "toBackVC", sender: nil)
+            self?.performSegue(withIdentifier: "toBackVC", sender: nil)
         }
         let cancelAction = UIAlertAction(title: "Hayır", style: .cancel)
         alertButton.addAction(alertAction)
         alertButton.addAction(cancelAction)
         present(alertButton, animated: true)
     }
+    @IBAction func unwindToGame(_ unwindSegue: UIStoryboardSegue) {
+        if let sourceViewController = unwindSegue.source as? ScoreViewController {
+            
+            startTime = nil
+            elapsedTime = 0
+            score = 0
+            remainingTime = selectedTime
+            
+            
+            
+            
+            startTimer()
+            
+            
+            showRandomTabooWord()
+        }
+    }
+
     
 }
 
