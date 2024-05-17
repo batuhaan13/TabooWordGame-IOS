@@ -16,7 +16,7 @@ class ViewController: UIViewController {
                 elapsedTime += Date().timeIntervalSince(startTime)
                 
             }
-            pauseResumeButton.setImage(UIImage(named: "play"), for: .normal)
+            pauseResumeButton.setImage(UIImage(named: "play-button"), for: .normal)
             isTimerRunning = false
         } else {
             startTime = Date() - elapsedTime
@@ -57,13 +57,15 @@ class ViewController: UIViewController {
         
         
         
-
+        
+        
         // Do any additional setup after loading the view.
         showRandomTabooWord()
         roundButtons()
         startTimer()
         updateTimer()
     }
+    
     
     func startTimer() {
         if !isTimerRunning {
@@ -109,6 +111,7 @@ class ViewController: UIViewController {
         
         let alert = UIAlertController(title: "Zaman doldu!", message: "Oyuna devam etmek istiyor musun?", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
+            
             
             self?.continueGame()
             self?.resetGame()
@@ -212,7 +215,7 @@ class ViewController: UIViewController {
             
             if viewModel.passAttempts == 0 {
                 showAlert(title: "Pas Hakkı Kalmadı", message: "Pas hakkınız bitti.")
-                
+                pasButton.isHidden = true
             }
         }
     }
@@ -254,7 +257,8 @@ class ViewController: UIViewController {
             showRandomTabooWord()
         }
     }
-
+    
+    
     
 }
 

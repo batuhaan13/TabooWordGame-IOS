@@ -153,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1940" y="-27"/>
+            <point key="canvasLocation" x="1961" y="-27"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="KuG-hk-kG3">
@@ -166,7 +166,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PUAN TABLOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-tc-pdL">
                                 <rect key="frame" x="16" y="59" width="361" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
                                 <color key="textColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -177,35 +177,42 @@
                                 <color key="textColor" red="0.22724014519999999" green="0.54426002500000004" blue="0.83852237460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSg-63-hwt">
-                                <rect key="frame" x="16" y="557" width="173" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-Zm-gea">
+                                <rect key="frame" x="231" y="557" width="146" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Yeniden Başla">
+                                <buttonConfiguration key="configuration" style="plain" title="İlerle">
                                     <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="startAgainTapped:" destination="P4X-yi-Jqa" eventType="touchUpInside" id="GIO-x8-0Kn"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="backVC" id="zeg-FC-5gw"/>
+                                    <action selector="continueButtonTapped:" destination="P4X-yi-Jqa" eventType="touchUpInside" id="9qr-kV-VL3"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="toContinuePlay" id="5Gr-7Q-QXQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rH-ko-kKg">
-                                <rect key="frame" x="231" y="557" width="146" height="43"/>
+                                <rect key="frame" x="16" y="557" width="146" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ana Menü">
                                     <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="mainMenuButton:" destination="P4X-yi-Jqa" eventType="touchUpInside" id="Pkn-lE-6E4"/>
+                                    <segue destination="Kf6-QM-KNc" kind="show" identifier="toMainMenu" id="DfX-ei-XHh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fT6-lg-eTB"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="eTB-eI-mRZ"/>
+                    <connections>
+                        <outlet property="scoreLabel" destination="7hK-sh-6Xe" id="99g-PC-FQZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEh-Ze-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3102" y="-27"/>
+            <point key="canvasLocation" x="3424" y="-27"/>
         </scene>
         <!--How To Play View Controller-->
         <scene sceneID="rrZ-UN-erW">
@@ -360,9 +367,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Bl-hF-vO0"/>
-        <segue reference="Zqi-Tt-aVu"/>
-        <segue reference="zeg-FC-5gw"/>
+        <segue reference="DfX-ei-XHh"/>
+        <segue reference="5Gr-7Q-QXQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back2" width="32" height="32"/>
