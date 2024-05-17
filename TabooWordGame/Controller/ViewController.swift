@@ -91,6 +91,7 @@ class ViewController: UIViewController {
             timer?.invalidate()
             timer = nil
             performSegue(withIdentifier: "NextVC", sender: nil)
+            
             return
         }
         
@@ -99,6 +100,13 @@ class ViewController: UIViewController {
         
         
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "NextVC" {
+            if let nextVC = segue.destination as? ScoreViewController {
+                nextVC.score = Int(scoreLabel.text ?? "0")
+            }
+        }
     }
     func resetProgressView() {
         progressView.setProgress(1.0, animated: false)
