@@ -12,6 +12,7 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     var score: Int?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if let score = score {
@@ -26,6 +27,8 @@ class ScoreViewController: UIViewController {
     
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "toRestart", sender: nil)
+        
         
     }
     

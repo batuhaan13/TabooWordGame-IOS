@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var tourLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var goalWordLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
@@ -47,8 +48,12 @@ class ViewController: UIViewController {
     var remainingTime = 30
     var score = 0
     var elapsedTime: TimeInterval = 0
+    
     var selectedTour: Int = 0
     var selectedTime: Int = 0
+    
+    var currentTour: Int = 1
+    var totalTours: Int = 5
     
     private var viewModel = TabooWordsViewModel()
     
@@ -64,6 +69,10 @@ class ViewController: UIViewController {
         roundButtons()
         startTimer()
         updateTimer()
+    }
+    func startNewTour() {
+        startTime = Date()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     
@@ -117,7 +126,7 @@ class ViewController: UIViewController {
         timer?.invalidate()
         isTimerRunning = false
         
-        let alert = UIAlertController(title: "Zaman doldu!", message: "Oyuna devam etmek istiyor musun?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
             
             
@@ -187,14 +196,18 @@ class ViewController: UIViewController {
     
     
     func showRandomTabooWord() {
-        let randomTabooWord = viewModel.getRandomTabooWord()
-        goalWordLabel.text = randomTabooWord.goalWord
-        
-        for (index, tabooWord) in randomTabooWord.tabooWords.enumerated() {
-            tabooWordLabels[index].text = tabooWord
+        if let randomTabooWord = viewModel.getRandomTabooWord() {
+            goalWordLabel.text = randomTabooWord.goalWord
             
+            for (index, tabooWord) in randomTabooWord.tabooWords.enumerated() {
+                tabooWordLabels[index].text = tabooWord
+            }
+        } else {
+            print("Tüm kelimeler kullanıldı. Oyunu bitir veya yeniden başlat.")
         }
     }
+    
+    
     @IBAction func correctButtonTapped(_ sender: UIButton) {
         score = max(0, score + 1)
         viewModel.increaseScore()
@@ -248,6 +261,9 @@ class ViewController: UIViewController {
         alertButton.addAction(cancelAction)
         present(alertButton, animated: true)
     }
+    func updateTourLabel() {
+        tourLabel.text = "\(currentTour)\(totalTours)"
+    }
     @IBAction func unwindToGame(_ unwindSegue: UIStoryboardSegue) {
         if let sourceViewController = unwindSegue.source as? ScoreViewController {
             
@@ -255,8 +271,6 @@ class ViewController: UIViewController {
             elapsedTime = 0
             score = 0
             remainingTime = selectedTime
-            
-            
             
             
             startTimer()

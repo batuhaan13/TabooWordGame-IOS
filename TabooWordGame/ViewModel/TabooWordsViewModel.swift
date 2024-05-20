@@ -46,28 +46,44 @@ class TabooWordsViewModel {
         TabooWord(goalWord: "Kapı", tabooWords: ["Ev", "Ahşap", "Kol", "Kilit", "Zil"]),
     ]
     
-    private var previousTabooWordIndex: Int?
+    private var availableTabooWords: [TabooWord]
     
-    private var previousTabooWord: TabooWord?
-    
-    func getRandomTabooWord() -> TabooWord {
-        var randomTabooWord: TabooWord
-        repeat {
-            randomTabooWord = tabooWords.randomElement()!
-        } while randomTabooWord == previousTabooWord
-        
-        previousTabooWord = randomTabooWord
-        return randomTabooWord
+    init() {
+        self.availableTabooWords = tabooWords.shuffled()
+        print("Tüm kelimeler karıştırıldı: \(availableTabooWords.map { $0.goalWord })")
     }
     
-    func selectRandomTabooWordAndIncreaseScore() -> TabooWord {
-        let randomTabooWord = getRandomTabooWord()
-        increaseScore()
-        return randomTabooWord
+    func getRandomTabooWord() -> TabooWord? {
+        guard !availableTabooWords.isEmpty else {
+            return nil
+        }
+        
+        let selectedWord = availableTabooWords.removeFirst()
+        print("Seçilen kelime: \(selectedWord.goalWord)")
+        // print("Kalan kelimeler: \(availableTabooWords.map { $0.goalWord })")
+        return selectedWord
+    }
+    
+    func selectRandomTabooWordAndIncreaseScore() -> TabooWord? {
+        if let randomTabooWord = getRandomTabooWord() {
+            increaseScore()
+            return randomTabooWord
+        } else {
+            
+            return nil
+        }
     }
     
     func increaseScore() {
         score += 1
     }
+    
+    func resetGame() {
+        availableTabooWords = tabooWords.shuffled()
+        score = 0
+        passAttempts = 3
+        //print("Oyun sıfırlandı. Yeni kelimeler: \(availableTabooWords.map { $0.goalWord })")
+    }
 }
+
 
