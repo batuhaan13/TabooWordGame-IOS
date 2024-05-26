@@ -28,8 +28,10 @@ class TimeAndTourViewController: UIViewController {
         
         
         tourSlider.addTarget(self, action: #selector(tourSliderChanged), for: .valueChanged)
-        updateTourLabel()
-        // Do any additional setup after loading the view.
+        
+        //updateTimeLabel()
+        //updateTourLabel()
+        
     }
     
     
@@ -67,10 +69,11 @@ class TimeAndTourViewController: UIViewController {
             }
         }
     }
-    func updateTimeLabel() {
-        timeLabel.text = "\(selectedTime) Saniye"
-    }
-    func updateTourLabel() {
-        tourLabel.text = "\(selectedTour) Tur"
-    }
+    //func updateTimeLabel() {
+     //   timeLabel.text = "\(selectedTime) Saniye"
+   // }
+    //func updateTourLabel() {
+    //    tourLabel.text = "\(selectedTour) Tur"
+    //}
+ 
 }

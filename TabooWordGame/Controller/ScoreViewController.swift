@@ -15,15 +15,13 @@ class ScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let score = score {
             scoreLabel.text = "\(score)"
         }
         
         // Do any additional setup after loading the view.
-    }
-    
-    
-    
+    }		
     
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {

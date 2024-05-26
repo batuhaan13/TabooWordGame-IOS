@@ -45,15 +45,16 @@ class ViewController: UIViewController {
     var timer: Timer?
     var startTime: Date?
     var isTimerRunning = false
-    var remainingTime = 30
     var score = 0
     var elapsedTime: TimeInterval = 0
-    
     var selectedTour: Int = 0
     var selectedTime: Int = 0
-    
     var currentTour: Int = 1
     var totalTours: Int = 5
+    var remainingTime = 30
+    
+    
+    
     
     private var viewModel = TabooWordsViewModel()
     
@@ -61,18 +62,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
-        
-        
-        // Do any additional setup after loading the view.
         showRandomTabooWord()
         roundButtons()
         startTimer()
         updateTimer()
     }
     func startNewTour() {
+        elapsedTime = 0
         startTime = Date()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        updateTourLabel()
+        startTimer()
+        
     }
     
     
@@ -82,9 +82,10 @@ class ViewController: UIViewController {
             isTimerRunning = true
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             
-            updateTimer()
+           
         }
     }
+    
     @objc func updateTimer() {
         guard let startTime = startTime else { return }
         
@@ -106,11 +107,25 @@ class ViewController: UIViewController {
         
         progressView.progress = Float(remainingTime) / Float(selectedTime)
         
+        if remainingTime <= 5 {
+            progressView.progressTintColor = .red
+            shakeProgressView()
+        } else if remainingTime <= 10 {
+            progressView.progressTintColor = .orange
+            shakeProgressView()
+        } else {
+            progressView.progressTintColor = .green
+        }
         
         
         
     }
+    func updateTourLabel() {
+        tourLabel.text = "\(currentTour)\(totalTours)"
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "NextVC" {
             if let nextVC = segue.destination as? ScoreViewController {
                 nextVC.score = Int(scoreLabel.text ?? "0")
@@ -252,7 +267,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        let alertButton = UIAlertController(title: "Geri Dön", message: "Ana ekrana dönmek istiyor musun?", preferredStyle: .alert)
+        let alertButton = UIAlertController(title: "Geri Dön", message: "", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
             self?.performSegue(withIdentifier: "toBackVC", sender: nil)
         }
@@ -261,9 +276,7 @@ class ViewController: UIViewController {
         alertButton.addAction(cancelAction)
         present(alertButton, animated: true)
     }
-    func updateTourLabel() {
-        tourLabel.text = "\(currentTour)\(totalTours)"
-    }
+    
     @IBAction func unwindToGame(_ unwindSegue: UIStoryboardSegue) {
         if let sourceViewController = unwindSegue.source as? ScoreViewController {
             
@@ -278,9 +291,22 @@ class ViewController: UIViewController {
             
             showRandomTabooWord()
         }
+        
     }
-    
-    
+    func shakeProgressView() {
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        let fromPoint = CGPoint(x: progressView.center.x - 5, y: progressView.center.y)
+        let toPoint = CGPoint(x: progressView.center.x + 5, y: progressView.center.y)
+        
+        shake.fromValue = NSValue(cgPoint: fromPoint)
+        shake.toValue = NSValue(cgPoint: toPoint)
+        
+        progressView.layer.add(shake, forKey: "position")
+    }
     
 }
 
