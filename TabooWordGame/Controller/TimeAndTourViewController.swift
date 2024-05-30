@@ -17,6 +17,10 @@ class TimeAndTourViewController: UIViewController {
     
     var selectedTour: Int = 10
     var selectedTime: Int = 60
+    var currentTour: Int = 1
+    
+    let tourValues = [5,10,15]
+    let timeValues = [30,60,90]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +29,16 @@ class TimeAndTourViewController: UIViewController {
         tourSlider.maximumValue = 2
         tourSlider.value = 1
         
+        timeSlider.minimumValue = 0
+        timeSlider.maximumValue = Float(timeValues.count - 1)
+        timeSlider.value = 1
         
-        
-        tourSlider.addTarget(self, action: #selector(tourSliderChanged), for: .valueChanged)
+        timeSlider.addTarget(self, action: #selector(timeSlider(_:)), for: .valueChanged)
+        tourSlider.addTarget(self, action: #selector(tourSliderChanged(_:)), for: .valueChanged)
         
         //updateTimeLabel()
         //updateTourLabel()
+        updateLabels()
         
     }
     
@@ -38,23 +46,33 @@ class TimeAndTourViewController: UIViewController {
     
     @IBAction func tourSliderChanged(_ sender: UISlider) {
         sender.value = round(sender.value)
-        let tourValues = [5,10,15]
+        //let tourValues = [5,10,15]
         let index = Int(sender.value)
-        //selectedTour = tourValues[index]
+        selectedTour = tourValues[index]
         guard index >= 0 && index < tourValues.count else {
             return
         }
         
         selectedTour = tourValues[index]
-        tourLabel.text = "\(selectedTour) Tur"
+        currentTour = 1
+        updateLabels()
     }
     
     @IBAction func timeSlider(_ sender: UISlider) {
         sender.value = round(sender.value)
-        let timeSliderValue = [30,60,90]
+        //let timeSliderValue = [30,60,90]
         let index = Int(sender.value)
-        selectedTime = timeSliderValue[index]
+        guard index >= 0 && index < timeValues.count else {
+            return
+        }
+        selectedTime = timeValues[index]
+        updateLabels()
+        
+    }
+    func updateLabels() {
         timeLabel.text = "\(selectedTime) Saniye"
+        tourLabel.text = "\(selectedTour) Tur"
+        
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
@@ -66,14 +84,10 @@ class TimeAndTourViewController: UIViewController {
             if let tabooVC = segue.destination as? ViewController {
                 tabooVC.selectedTour = selectedTour
                 tabooVC.selectedTime = selectedTime
+                tabooVC.currentTour = currentTour
             }
         }
     }
-    //func updateTimeLabel() {
-     //   timeLabel.text = "\(selectedTime) Saniye"
-   // }
-    //func updateTourLabel() {
-    //    tourLabel.text = "\(selectedTour) Tur"
-    //}
- 
+    
+    
 }

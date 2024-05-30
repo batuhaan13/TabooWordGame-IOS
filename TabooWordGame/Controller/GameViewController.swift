@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         roundButtons()
         startTimer()
         updateTimer()
+        updateTourLabel()
     }
     func startNewTour() {
         elapsedTime = 0
@@ -74,6 +75,7 @@ class ViewController: UIViewController {
         startTimer()
         
     }
+    
     
     
     func startTimer() {
@@ -122,6 +124,14 @@ class ViewController: UIViewController {
     }
     func updateTourLabel() {
         tourLabel.text = "\(currentTour)\(totalTours)"
+    }
+    func nextTour() {
+        if currentTour < selectedTour {
+            currentTour += 1
+        } else {
+            currentTour = 1
+        }
+        updateTourLabel()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
