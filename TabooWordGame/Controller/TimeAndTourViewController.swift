@@ -26,7 +26,7 @@ class TimeAndTourViewController: UIViewController {
         super.viewDidLoad()
         
         tourSlider.minimumValue = 0
-        tourSlider.maximumValue = 2
+        tourSlider.maximumValue = Float(tourValues.count - 1)
         tourSlider.value = 1
         
         timeSlider.minimumValue = 0
@@ -46,21 +46,19 @@ class TimeAndTourViewController: UIViewController {
     
     @IBAction func tourSliderChanged(_ sender: UISlider) {
         sender.value = round(sender.value)
-        //let tourValues = [5,10,15]
         let index = Int(sender.value)
-        selectedTour = tourValues[index]
         guard index >= 0 && index < tourValues.count else {
             return
         }
         
         selectedTour = tourValues[index]
+        print("Selected Tour: \(selectedTour)")
         currentTour = 1
         updateLabels()
     }
     
     @IBAction func timeSlider(_ sender: UISlider) {
         sender.value = round(sender.value)
-        //let timeSliderValue = [30,60,90]
         let index = Int(sender.value)
         guard index >= 0 && index < timeValues.count else {
             return
@@ -72,6 +70,7 @@ class TimeAndTourViewController: UIViewController {
     func updateLabels() {
         timeLabel.text = "\(selectedTime) Saniye"
         tourLabel.text = "\(selectedTour) Tur"
+        print("Updated Labels: \(timeLabel.text),\(tourLabel.text)") // Debugging
         
     }
     

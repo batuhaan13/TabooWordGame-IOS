@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ScoreViewControllerDelegate {
+    
+    
     
     @IBAction func pauseResumeButtonTapped(_ sender: UIButton) {
         if isTimerRunning {
@@ -84,7 +86,7 @@ class ViewController: UIViewController {
             isTimerRunning = true
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             
-           
+            
         }
     }
     
@@ -123,22 +125,27 @@ class ViewController: UIViewController {
         
     }
     func updateTourLabel() {
-        tourLabel.text = "\(currentTour)\(totalTours)"
+        
+        tourLabel.text = "1/\(selectedTour)"
+        print("Updated Labels: \(tourLabel.text)")
     }
     func nextTour() {
         if currentTour < selectedTour {
             currentTour += 1
         } else {
-            currentTour = 1
+            showEndGameAlert()
         }
-        updateTourLabel()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "NextVC" {
             if let nextVC = segue.destination as? ScoreViewController {
-                nextVC.score = Int(scoreLabel.text ?? "0")
+                nextVC.score = score
+                nextVC.currentTour = currentTour
+                nextVC.totalTours = totalTours
+                nextVC.delegate = self
             }
         }
     }
@@ -147,31 +154,14 @@ class ViewController: UIViewController {
     }
     
     func showEndGameAlert() {
-        
-        timer?.invalidate()
-        isTimerRunning = false
-        
-        let alert = UIAlertController(title: "", message: "", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
-            
-            
-            self?.continueGame()
-            self?.resetGame()
-            self?.resetProgressView()
-            self?.resetTimer()
-            self?.updatePassButton()
-            self?.resetScore()
-            self?.resetPass()
-            
+        let alert = UIAlertController(title: "Oyun Bitti", message: "Toplam Skor: \(score)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Tamam", style: .default) { [weak self] _ in
+            self?.performSegue(withIdentifier: "toMainMenu", sender: nil)
         }
-        let cancelAction = UIAlertAction(title: "Hayır", style: .cancel)
-        
-        alert.addAction(continueAction)
-        alert.addAction(cancelAction)
-        
+        alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
-        
     }
+    
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Tamam", style: .default, handler: nil)
@@ -179,33 +169,42 @@ class ViewController: UIViewController {
         present(alert,animated: true,completion: nil)
         
     }
-    func continueGame() {
-        resetGame()
-        resetProgressView()
-        resetTimer()
-        updatePassButton()
+    /*
+     func continueGame() {
+     resetGame()
+     resetProgressView()
+     resetTimer()
+     updatePassButton()
+     }
+     func resetScore() {
+     scoreLabel.text = "0"
+     }
+     
+     func resetGame() {
+     startTime = Date()
+     
+     startTimer()
+     resetTimer()
+     showRandomTabooWord()
+     }
+     func resetPass() {
+     viewModel.passAttempts = 3
+     pasButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+     updatePassButton()
+     }
+     func resetTimer() {
+     startTime = Date()
+     
+     }
+     */
+    func restartTimer() {
+            elapsedTime = 0
+            startTime = Date()
+            startTimer()
+        }
+    func restartProgress() {
+        progressView.progress = 1.0
     }
-    func resetScore() {
-        scoreLabel.text = "0"
-    }
-    
-    func resetGame() {
-        startTime = Date()
-        
-        startTimer()
-        resetTimer()
-        showRandomTabooWord()
-    }
-    func resetPass() {
-        viewModel.passAttempts = 3
-        pasButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        updatePassButton()
-    }
-    func resetTimer() {
-        startTime = Date()
-        
-    }
-    
     func roundButtons() {
         let buttons : [UIButton] = [correctButton, pasButton, boomButton, pauseResumeButton]
         
@@ -234,7 +233,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func correctButtonTapped(_ sender: UIButton) {
-        score = max(0, score + 1)
+        score += 1
         viewModel.increaseScore()
         updateScoreLabel()
         showRandomTabooWord()
@@ -267,7 +266,7 @@ class ViewController: UIViewController {
     }
     func updatePassButton() {
         let remainingAttempts = viewModel.passAttempts
-        
+        pasButton.setTitle("\(remainingAttempts)", for: .normal)
         
     }
     override func viewWillDisappear(_ animated: Bool) {
@@ -289,17 +288,13 @@ class ViewController: UIViewController {
     
     @IBAction func unwindToGame(_ unwindSegue: UIStoryboardSegue) {
         if let sourceViewController = unwindSegue.source as? ScoreViewController {
+            if currentTour < selectedTour {
+                currentTour += 1
+                startNewTour()
+            } else {
+                showEndGameAlert()
+            }
             
-            startTime = nil
-            elapsedTime = 0
-            score = 0
-            remainingTime = selectedTime
-            
-            
-            startTimer()
-            
-            
-            showRandomTabooWord()
         }
         
     }
@@ -316,6 +311,9 @@ class ViewController: UIViewController {
         shake.toValue = NSValue(cgPoint: toPoint)
         
         progressView.layer.add(shake, forKey: "position")
+    }
+    func didContinueToNextRound() {
+        
     }
     
 }

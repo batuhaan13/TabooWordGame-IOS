@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol ScoreViewControllerDelegate: AnyObject {
+    func didContinueToNextRound()
+    func restartTimer() 
+    func restartProgress()
+}   
+
 class ScoreViewController: UIViewController {
     
     @IBOutlet weak var scoreLabel: UILabel!
     var score: Int?
-    
+    var currentTour: Int = 0
+    var totalTours: Int = 0
+    weak var delegate: ScoreViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +27,24 @@ class ScoreViewController: UIViewController {
         if let score = score {
             scoreLabel.text = "\(score)"
         }
-        
-        // Do any additional setup after loading the view.
-    }		
+    }
     
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toRestart", sender: nil)
+        currentTour += 1
+        if currentTour < totalTours {
+            scoreLabel.text = "\(currentTour)/\(totalTours)"
+            delegate?.didContinueToNextRound()
+            
+        } else {
+            performSegue(withIdentifier: "toRestart", sender: nil)
         
-        
+        }
+        delegate?.restartTimer()
+        delegate?.restartProgress()
     }
     
     @IBAction func mainMenuButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toMainMenu", sender: nil)
     }
-    
 }
