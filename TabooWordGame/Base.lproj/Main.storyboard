@@ -423,9 +423,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Bl-hF-vO0"/>
         <segue reference="Zqi-Tt-aVu"/>
-        <segue reference="fah-n8-GrP"/>
+        <segue reference="jyJ-F2-Nrg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back2" width="32" height="32"/>

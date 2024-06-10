@@ -52,7 +52,6 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     var selectedTour: Int = 0
     var selectedTime: Int = 0
     var currentTour: Int = 1
-    var totalTours: Int = 5
     var remainingTime = 30
     
     
@@ -64,6 +63,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         super.viewDidLoad()
         
         
+        
         showRandomTabooWord()
         roundButtons()
         startTimer()
@@ -73,6 +73,8 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     func startNewTour() {
         elapsedTime = 0
         startTime = Date()
+        score = 0
+        updateScoreLabel()
         updateTourLabel()
         startTimer()
         
@@ -126,12 +128,13 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     }
     func updateTourLabel() {
         
-        tourLabel.text = "1/\(selectedTour)"
+        tourLabel.text = "\(currentTour)/\(selectedTour)"
         print("Updated Labels: \(tourLabel.text)")
     }
     func nextTour() {
         if currentTour < selectedTour {
             currentTour += 1
+            updateTourLabel()
         } else {
             showEndGameAlert()
         }
@@ -144,7 +147,8 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
             if let nextVC = segue.destination as? ScoreViewController {
                 nextVC.score = score
                 nextVC.currentTour = currentTour
-                nextVC.totalTours = totalTours
+                nextVC.totalTours = selectedTour
+                //nextVC.totalTours = totalTours
                 nextVC.delegate = self
             }
         }
@@ -169,34 +173,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         present(alert,animated: true,completion: nil)
         
     }
-    /*
-     func continueGame() {
-     resetGame()
-     resetProgressView()
-     resetTimer()
-     updatePassButton()
-     }
-     func resetScore() {
-     scoreLabel.text = "0"
-     }
-     
-     func resetGame() {
-     startTime = Date()
-     
-     startTimer()
-     resetTimer()
-     showRandomTabooWord()
-     }
-     func resetPass() {
-     viewModel.passAttempts = 3
-     pasButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-     updatePassButton()
-     }
-     func resetTimer() {
-     startTime = Date()
-     
-     }
-     */
+   
     func restartTimer() {
             elapsedTime = 0
             startTime = Date()
@@ -313,6 +290,9 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         progressView.layer.add(shake, forKey: "position")
     }
     func didContinueToNextRound() {
+        nextTour()
+        startNewTour()
+        restartProgress()
         
     }
     

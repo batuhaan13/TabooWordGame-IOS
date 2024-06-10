@@ -19,54 +19,55 @@ class TimeAndTourViewController: UIViewController {
     var selectedTime: Int = 60
     var currentTour: Int = 1
     
-    let tourValues = [5,10,15]
-    let timeValues = [30,60,90]
+    let tourValues : [Float] = [5,10,15]
+    let timeValues : [Float] = [30,60,90]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSliders()
+        
+    }
+    func setupSliders() {
         tourSlider.minimumValue = 0
         tourSlider.maximumValue = Float(tourValues.count - 1)
-        tourSlider.value = 1
+        tourSlider.value = 1 // Default to middle value
+        tourSlider.isContinuous = true
+        tourSlider.addTarget(self, action: #selector(tourSliderChanged(_:)), for: .valueChanged)
         
         timeSlider.minimumValue = 0
         timeSlider.maximumValue = Float(timeValues.count - 1)
-        timeSlider.value = 1
-        
+        timeSlider.value = 1 // Default to middle value
+        timeSlider.isContinuous = true
         timeSlider.addTarget(self, action: #selector(timeSlider(_:)), for: .valueChanged)
-        tourSlider.addTarget(self, action: #selector(tourSliderChanged(_:)), for: .valueChanged)
         
-        //updateTimeLabel()
-        //updateTourLabel()
         updateLabels()
-        
     }
     
-    
-    
     @IBAction func tourSliderChanged(_ sender: UISlider) {
-        sender.value = round(sender.value)
-        let index = Int(sender.value)
-        guard index >= 0 && index < tourValues.count else {
-            return
-        }
+        let step: Float = 1
+        let newValue = round(sender.value / step) * step
+        sender.value = newValue
         
-        selectedTour = tourValues[index]
-        print("Selected Tour: \(selectedTour)")
-        currentTour = 1
+        let index = Int(round(sender.value))
+        guard index >= 0 && index < tourValues.count else { return }
+        selectedTour = Int(tourValues[index])
         updateLabels()
     }
     
     @IBAction func timeSlider(_ sender: UISlider) {
-        sender.value = round(sender.value)
-        let index = Int(sender.value)
-        guard index >= 0 && index < timeValues.count else {
-            return
-        }
-        selectedTime = timeValues[index]
-        updateLabels()
+        let step: Float = 1
+        let newValue = round(sender.value / step) * step
+        sender.value = newValue
         
+        let index = Int(round(sender.value))
+        guard index >= 0 && index < timeValues.count else { return }
+        selectedTime = Int(timeValues[index])
+        updateLabels()
     }
+    
     func updateLabels() {
         timeLabel.text = "\(selectedTime) Saniye"
         tourLabel.text = "\(selectedTour) Tur"
@@ -83,7 +84,7 @@ class TimeAndTourViewController: UIViewController {
             if let tabooVC = segue.destination as? ViewController {
                 tabooVC.selectedTour = selectedTour
                 tabooVC.selectedTime = selectedTime
-                tabooVC.currentTour = currentTour
+                //tabooVC.currentTour = currentTour
             }
         }
     }

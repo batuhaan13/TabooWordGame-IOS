@@ -32,17 +32,28 @@ class ScoreViewController: UIViewController {
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         currentTour += 1
-        if currentTour < totalTours {
-            scoreLabel.text = "\(currentTour)/\(totalTours)"
-            delegate?.didContinueToNextRound()
-            
-        } else {
-            performSegue(withIdentifier: "toRestart", sender: nil)
-        
+            if currentTour <= totalTours {
+                delegate?.didContinueToNextRound()
+                delegate?.restartTimer()
+                delegate?.restartProgress()
+                dismiss(animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Oyun Bitti", message: "Tur sayısı doldu. Tekrar oynamak ister misiniz?", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { [weak self] (_) in
+                    self?.dismiss(animated: true, completion: nil)
+                    self?.currentTour = 0
+                    self?.delegate?.didContinueToNextRound()
+                    self?.delegate?.restartTimer()
+                    self?.delegate?.restartProgress()
+                    self?.performSegue(withIdentifier: "toRestart", sender: nil)
+
+                }))
+                alert.addAction(UIAlertAction(title: "Hayır", style: .cancel, handler: { (_) in
+                    self.performSegue(withIdentifier: "toRestart", sender: nil)
+                }))
+                present(alert, animated: true, completion: nil)
+            }
         }
-        delegate?.restartTimer()
-        delegate?.restartProgress()
-    }
     
     @IBAction func mainMenuButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toMainMenu", sender: nil)
