@@ -9,13 +9,16 @@ import UIKit
 
 protocol ScoreViewControllerDelegate: AnyObject {
     func didContinueToNextRound()
-    func restartTimer() 
+    func restartTimer()
     func restartProgress()
-}   
+}
 
 class ScoreViewController: UIViewController {
     
+    @IBOutlet weak var redScoreLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    var redScore: Int?
     var score: Int?
     var currentTour: Int = 0
     var totalTours: Int = 0
@@ -27,35 +30,31 @@ class ScoreViewController: UIViewController {
         if let score = score {
             scoreLabel.text = "\(score)"
         }
+        if let redScore = redScore {
+            redScoreLabel.text = "\(redScore)"
+        }
     }
     
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
         currentTour += 1
-            if currentTour <= totalTours {
-                delegate?.didContinueToNextRound()
-                delegate?.restartTimer()
-                delegate?.restartProgress()
-                dismiss(animated: true, completion: nil)
-            } else {
-                let alert = UIAlertController(title: "Oyun Bitti", message: "Tur sayısı doldu. Tekrar oynamak ister misiniz?", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Evet", style: .default, handler: { [weak self] (_) in
-                    self?.dismiss(animated: true, completion: nil)
-                    self?.currentTour = 0
-                    self?.delegate?.didContinueToNextRound()
-                    self?.delegate?.restartTimer()
-                    self?.delegate?.restartProgress()
-                    self?.performSegue(withIdentifier: "toRestart", sender: nil)
-
-                }))
-                alert.addAction(UIAlertAction(title: "Hayır", style: .cancel, handler: { (_) in
-                    self.performSegue(withIdentifier: "toRestart", sender: nil)
-                }))
-                present(alert, animated: true, completion: nil)
+        if currentTour <= totalTours {
+            delegate?.didContinueToNextRound()
+            delegate?.restartTimer()
+            delegate?.restartProgress()
+            dismiss(animated: true, completion: nil)
+        } else {
+            self.dismiss(animated: true) {
+                self.delegate?.didContinueToNextRound()
+                self.delegate?.restartTimer()
+                self.delegate?.restartProgress()
             }
         }
+    }
+    
     
     @IBAction func mainMenuButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toMainMenu", sender: nil)
     }
+    
 }

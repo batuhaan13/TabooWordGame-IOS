@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIc-Dq-TQE">
-                                <rect key="frame" x="31" y="68" width="44" height="46"/>
+                                <rect key="frame" x="16" y="110" width="44" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pause"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="t3m-SE-qrE">
-                                <rect key="frame" x="42" y="170" width="308" height="4"/>
+                                <rect key="frame" x="42" y="68" width="308" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
@@ -113,7 +113,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMI-Cu-GfG">
-                                <rect key="frame" x="317" y="61" width="60" height="61"/>
+                                <rect key="frame" x="317" y="103" width="60" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="back2" title=""/>
@@ -121,18 +121,25 @@
                                     <action selector="backButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7V-OY-8Kv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-Uj-dtw">
-                                <rect key="frame" x="150" y="61" width="93" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IIt-BW-AN2" userLabel="tourLabel">
-                                <rect key="frame" x="72" y="119" width="60" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IIt-BW-AN2" userLabel="tourLabel">
+                                <rect key="frame" x="153" y="89" width="75" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="30"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4uZ-xC-fIf">
+                                <rect key="frame" x="72" y="137" width="63" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBU-Uj-dtw">
+                                <rect key="frame" x="246" y="137" width="63" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -148,6 +155,7 @@
                         <outlet property="passButtonLabel" destination="SnP-PI-oIe" id="YIU-WW-ddX"/>
                         <outlet property="pauseResumeButton" destination="HIc-Dq-TQE" id="4d1-rX-2yY"/>
                         <outlet property="progressView" destination="t3m-SE-qrE" id="Mfk-ec-x8G"/>
+                        <outlet property="redScoreLabel" destination="4uZ-xC-fIf" id="Mm7-4l-QBd"/>
                         <outlet property="scoreLabel" destination="BBU-Uj-dtw" id="kBE-Wa-FJX"/>
                         <outlet property="tourLabel" destination="IIt-BW-AN2" id="SSe-6U-aco"/>
                         <outletCollection property="tabooWordLabels" destination="4un-eH-9S4" collectionClass="NSMutableArray" id="Vwq-1v-xsa"/>
@@ -157,11 +165,12 @@
                         <outletCollection property="tabooWordLabels" destination="8yH-TF-Pse" collectionClass="NSMutableArray" id="TA2-4y-KM6"/>
                         <segue destination="Kf6-QM-KNc" kind="show" identifier="toBackVC" id="Zqi-Tt-aVu"/>
                         <segue destination="P4X-yi-Jqa" kind="show" identifier="NextVC" id="9Bl-hF-vO0"/>
+                        <segue destination="hS1-FO-vaM" kind="presentation" identifier="toTotalScoreVC" id="krj-0v-gDr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012.9770992366412" y="-158.45070422535213"/>
+            <point key="canvasLocation" x="2048" y="-298"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="KuG-hk-kG3">
@@ -171,29 +180,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUAN TABLOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-tc-pdL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PUAN TABLOSU" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zum-tc-pdL">
                                 <rect key="frame" x="16" y="59" width="361" height="79"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="79" id="YOs-CX-8u3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="47"/>
                                 <color key="textColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hK-sh-6Xe">
-                                <rect key="frame" x="16" y="206" width="361" height="70"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="H91-3e-O5s"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hK-sh-6Xe">
+                                <rect key="frame" x="231" y="229" width="125" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
                                 <color key="textColor" red="0.22724014519999999" green="0.54426002500000004" blue="0.83852237460000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rH-ko-kKg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rH-ko-kKg">
                                 <rect key="frame" x="16" y="557" width="146" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="g8N-j9-fAc"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Ana Menü">
                                     <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
@@ -203,8 +206,9 @@
                                     <segue destination="Kf6-QM-KNc" kind="show" identifier="toMainMenu" id="DfX-ei-XHh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-Zm-gea">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGV-Zm-gea">
                                 <rect key="frame" x="222" y="557" width="134" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="İleri">
                                     <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
@@ -214,30 +218,95 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="toRestart" id="fah-n8-GrP"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ8-YS-ewI">
+                                <rect key="frame" x="37" y="229" width="125" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fT6-lg-eTB"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fT6-lg-eTB" firstAttribute="bottom" secondItem="8rH-ko-kKg" secondAttribute="bottom" constant="252" id="3lU-Qt-qvH"/>
-                            <constraint firstItem="Zum-tc-pdL" firstAttribute="top" secondItem="fT6-lg-eTB" secondAttribute="top" constant="59" id="9GG-lH-1Cx"/>
-                            <constraint firstItem="7hK-sh-6Xe" firstAttribute="trailing" secondItem="IGV-Zm-gea" secondAttribute="trailing" id="Amp-Sn-CBo"/>
-                            <constraint firstItem="Zum-tc-pdL" firstAttribute="leading" secondItem="hPt-G1-hlZ" secondAttribute="leadingMargin" id="BG1-ug-4hY"/>
-                            <constraint firstItem="8rH-ko-kKg" firstAttribute="baseline" secondItem="IGV-Zm-gea" secondAttribute="baseline" id="DV9-xV-ogF"/>
-                            <constraint firstItem="7hK-sh-6Xe" firstAttribute="top" secondItem="Zum-tc-pdL" secondAttribute="bottom" constant="68" id="TjQ-zY-Odi"/>
-                            <constraint firstItem="Zum-tc-pdL" firstAttribute="trailing" secondItem="hPt-G1-hlZ" secondAttribute="trailingMargin" id="WLc-RD-VYt"/>
-                            <constraint firstItem="Zum-tc-pdL" firstAttribute="leading" secondItem="7hK-sh-6Xe" secondAttribute="leading" id="ayl-rO-ib7"/>
-                            <constraint firstItem="Zum-tc-pdL" firstAttribute="trailing" secondItem="7hK-sh-6Xe" secondAttribute="trailing" id="ile-sE-MYX"/>
-                            <constraint firstItem="7hK-sh-6Xe" firstAttribute="leading" secondItem="8rH-ko-kKg" secondAttribute="leading" id="ohP-Mw-GHu"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eTB-eI-mRZ"/>
                     <connections>
+                        <outlet property="redScoreLabel" destination="NJ8-YS-ewI" id="MRe-9H-GPo"/>
                         <outlet property="scoreLabel" destination="7hK-sh-6Xe" id="99g-PC-FQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEh-Ze-jiz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3423.6641221374043" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="3346" y="580"/>
+        </scene>
+        <!--Total Score View Controller-->
+        <scene sceneID="uhO-8Z-T1c">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="hS1-FO-vaM" customClass="TotalScoreViewController" customModule="TabooWordGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cch-AE-8xM">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oyun Sona Erdi!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puU-JY-9ki">
+                                <rect key="frame" x="24" y="76" width="345" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="47"/>
+                                <color key="textColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MzL-4O-WzD">
+                                <rect key="frame" x="24" y="226" width="131" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gd-JH-HTl">
+                                <rect key="frame" x="238" y="226" width="131" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
+                                <color key="textColor" red="0.31372550129999999" green="0.53725492949999998" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9g-Ac-oQA">
+                                <rect key="frame" x="85" y="557" width="224" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Yeniden başlat">
+                                    <fontDescription key="titleFontDescription" name="Optima-Bold" family="Optima" pointSize="31"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mainMenuButtonTapped:" destination="hS1-FO-vaM" eventType="touchUpInside" id="Mwt-OT-Qw5"/>
+                                    <segue destination="PZF-Hi-6dw" kind="presentation" identifier="toMainMenu" id="f7K-Sx-cWI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYg-I4-THd">
+                                <rect key="frame" x="178" y="238" width="37" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
+                                <color key="textColor" red="1" green="0.80480784179999998" blue="0.50273019080000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bz-DS-NrC">
+                                <rect key="frame" x="16" y="393" width="353" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="48"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GjJ-Jc-UhR"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueScoreLabel" destination="1gd-JH-HTl" id="ZqU-gK-GUS"/>
+                        <outlet property="redScoreLabel" destination="MzL-4O-WzD" id="KfP-sC-UGy"/>
+                        <outlet property="resultTeamLabel" destination="3bz-DS-NrC" id="vCv-rA-7Np"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8S-SL-pLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4052.6717557251905" y="-158.45070422535213"/>
         </scene>
         <!--How To Play View Controller-->
         <scene sceneID="rrZ-UN-erW">
@@ -423,8 +492,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9Bl-hF-vO0"/>
+        <segue reference="f7K-Sx-cWI"/>
         <segue reference="Zqi-Tt-aVu"/>
-        <segue reference="jyJ-F2-Nrg"/>
+        <segue reference="fah-n8-GrP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back2" width="32" height="32"/>
@@ -433,6 +504,12 @@
         <image name="tabubu" width="295" height="462"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

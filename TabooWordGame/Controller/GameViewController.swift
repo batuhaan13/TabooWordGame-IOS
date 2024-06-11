@@ -35,6 +35,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var passButtonLabel: UIButton!
     
+    @IBOutlet weak var redScoreLabel: UILabel!
     
     
     @IBOutlet var tabooWordLabels: [UILabel]!
@@ -48,12 +49,14 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     var startTime: Date?
     var isTimerRunning = false
     var score = 0
+    var redScore = 0
     var elapsedTime: TimeInterval = 0
     var selectedTour: Int = 0
     var selectedTime: Int = 0
     var currentTour: Int = 1
     var remainingTime = 30
-    
+    var totalBlueScore = 0
+    var totalRedScore = 0
     
     
     
@@ -74,6 +77,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         elapsedTime = 0
         startTime = Date()
         score = 0
+        redScore = 0
         updateScoreLabel()
         updateTourLabel()
         startTimer()
@@ -136,7 +140,8 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
             currentTour += 1
             updateTourLabel()
         } else {
-            showEndGameAlert()
+            performSegue(withIdentifier: "toTotalScoreVC", sender: nil)
+            //showEndGameAlert()
         }
         
     }
@@ -148,8 +153,14 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
                 nextVC.score = score
                 nextVC.currentTour = currentTour
                 nextVC.totalTours = selectedTour
+                nextVC.redScore = redScore
                 //nextVC.totalTours = totalTours
                 nextVC.delegate = self
+            }
+        } else if segue.identifier == "toTotalScoreVC" {
+            if let totalScoreVC = segue.destination as? TotalScoreViewController {
+                totalScoreVC.totalBlueScore = totalBlueScore
+                totalScoreVC.totalRedScore = totalRedScore
             }
         }
     }
@@ -211,6 +222,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     
     @IBAction func correctButtonTapped(_ sender: UIButton) {
         score += 1
+        totalBlueScore += 1
         viewModel.increaseScore()
         updateScoreLabel()
         showRandomTabooWord()
@@ -219,9 +231,11 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     }
     func updateScoreLabel() {
         scoreLabel.text = "\(score)"
+        redScoreLabel.text = "\(redScore)"
     }
     @IBAction func boomButtonTapped(_ sender: UIButton) {
-        score = max(0, score - 1)
+        redScore += 1
+        totalRedScore += 1
         updateScoreLabel()
         showRandomTabooWord()
         
@@ -232,7 +246,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         if viewModel.passAttempts > 0 {
             viewModel.passAttempts -= 1
             
-            updatePassButton()
+            //updatePassButton()
             showRandomTabooWord()
             
             if viewModel.passAttempts == 0 {
