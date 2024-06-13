@@ -17,6 +17,9 @@ class ScoreViewController: UIViewController {
     
     @IBOutlet weak var redScoreLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var currentScore: UILabel!
+    @IBOutlet weak var currentLabel: UILabel!
+    
     
     var redScore: Int?
     var score: Int?
@@ -32,8 +35,30 @@ class ScoreViewController: UIViewController {
         }
         if let redScore = redScore {
             redScoreLabel.text = "\(redScore)"
+            
+            currentLabel.text = showCurrentScore()
         }
+        func showCurrentScore() -> String {
+            guard let score = score, let redScore = redScore else {
+                return "="
+            }
+            if redScore > score {
+                currentScore.text = "Kırmızı Takım önde!"
+                currentScore.textColor = .systemRed
+                return ">"
+            } else if redScore < score {
+                currentScore.text = "Mavi Takım önde!"
+                currentScore.textColor = .tintColor
+                return "<"
+            } else {
+                currentScore.text = "Tur berabere!"
+                currentScore.textColor = .gray
+                return "="
+            }
+        }
+        
     }
+    
     
     
     @IBAction func continueButtonTapped(_ sender: UIButton) {
@@ -56,5 +81,6 @@ class ScoreViewController: UIViewController {
     @IBAction func mainMenuButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toMainMenu", sender: nil)
     }
+    
     
 }

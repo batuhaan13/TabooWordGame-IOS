@@ -19,7 +19,7 @@ class TabooWordsViewModel {
         TabooWord(goalWord: "Müzik", tabooWords: ["Nota", "Enstrüman", "Ses", "Ritim", "Melodi"]),
         TabooWord(goalWord: "Yazı", tabooWords: ["Karakter", "Cümle", "Kelime", "Paragraf", "Roman"]),
         TabooWord(goalWord: "Havuz", tabooWords: ["Su", "Yüzme", "Küçük", "Derin", "Kenar"]),
-        TabooWord(goalWord: "Gitar", tabooWords: ["Tell", "Akustik", "Elektro", "Çalmak", "Ses"]),
+        TabooWord(goalWord: "Gitar", tabooWords: ["Tel", "Akustik", "Elektro", "Çalmak", "Ses"]),
         TabooWord(goalWord: "Spor", tabooWords: ["Futbol", "Basketbol", "Voleybol", "Tenis", "Yüzme"]),
         TabooWord(goalWord: "Bisiklet", tabooWords: ["Tekerlek", "Pedal", "Fren", "Yol", "Sürmek"]),
         TabooWord(goalWord: "Pasta", tabooWords: ["Un", "Krem", "Çikolata", "Kurabiye", "Tatlı"]),

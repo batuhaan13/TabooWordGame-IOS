@@ -84,7 +84,7 @@ class TimeAndTourViewController: UIViewController {
             if let tabooVC = segue.destination as? ViewController {
                 tabooVC.selectedTour = selectedTour
                 tabooVC.selectedTime = selectedTime
-                //tabooVC.currentTour = currentTour
+                
             }
         }
     }

@@ -76,8 +76,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     func startNewTour() {
         elapsedTime = 0
         startTime = Date()
-        score = 0
-        redScore = 0
+        
         updateScoreLabel()
         updateTourLabel()
         startTimer()
@@ -140,8 +139,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
             currentTour += 1
             updateTourLabel()
         } else {
-            performSegue(withIdentifier: "toTotalScoreVC", sender: nil)
-            //showEndGameAlert()
+            showTotalScore()
         }
         
     }
@@ -154,7 +152,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
                 nextVC.currentTour = currentTour
                 nextVC.totalTours = selectedTour
                 nextVC.redScore = redScore
-                //nextVC.totalTours = totalTours
+                
                 nextVC.delegate = self
             }
         } else if segue.identifier == "toTotalScoreVC" {
@@ -163,6 +161,9 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
                 totalScoreVC.totalRedScore = totalRedScore
             }
         }
+    }
+    func showTotalScore() {
+        performSegue(withIdentifier: "toTotalScoreVC", sender: nil)
     }
     func resetProgressView() {
         progressView.setProgress(1.0, animated: false)
@@ -184,12 +185,12 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         present(alert,animated: true,completion: nil)
         
     }
-   
+    
     func restartTimer() {
-            elapsedTime = 0
-            startTime = Date()
-            startTimer()
-        }
+        elapsedTime = 0
+        startTime = Date()
+        startTimer()
+    }
     func restartProgress() {
         progressView.progress = 1.0
     }
@@ -246,7 +247,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         if viewModel.passAttempts > 0 {
             viewModel.passAttempts -= 1
             
-            //updatePassButton()
+            
             showRandomTabooWord()
             
             if viewModel.passAttempts == 0 {
