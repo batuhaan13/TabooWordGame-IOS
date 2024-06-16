@@ -8,7 +8,7 @@
 import UIKit
 
 class TotalScoreViewController: UIViewController {
-
+    
     @IBOutlet weak var redScoreLabel: UILabel!
     @IBOutlet weak var blueScoreLabel: UILabel!
     @IBOutlet weak var resultTeamLabel: UILabel!
@@ -49,10 +49,17 @@ class TotalScoreViewController: UIViewController {
         }
         
     }
-
+    
     @IBAction func mainMenuButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "toMainMenu", sender: nil)
+        let alertButton = UIAlertController(title: "Ana menüye dön?", message: "", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Evet", style: .default) { [weak self] _ in
+            self?.performSegue(withIdentifier: "toMainMenu", sender: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Hayır", style: .cancel)
+        alertButton.addAction(alertAction)
+        alertButton.addAction(cancelAction)
+        present(alertButton, animated: true)
     }
     
-
+    
 }
