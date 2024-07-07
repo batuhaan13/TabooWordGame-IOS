@@ -9,10 +9,26 @@ import UIKit
 
 class StartScreenViewController: UIViewController {
     
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var howToPlay: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
+        //startButton.backgroundColor = UIColor.systemPink
+        //howToPlay.backgroundColor = UIColor.systemPink
+        
+        //startButton.layer.cornerRadius = 10
+        //startButton.layer.masksToBounds = true
+        
+        //howToPlay.layer.cornerRadius = 10
+       //howToPlay.layer.masksToBounds = true
+        
+        //startButton.layer.shadowColor = UIColor.black.cgColor
+        //startButton.layer.shadowOffset = CGSize(width: 0, height: 2)
+        //startButton.layer.opacity = 0.5
+        //startButton.layer.shadowRadius = 5
     }
     
     
