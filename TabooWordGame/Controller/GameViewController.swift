@@ -64,22 +64,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        // Button Color
-        correctButton.backgroundColor = UIColor.systemGreen
-        pasButton.backgroundColor = UIColor.systemYellow
-        boomButton.backgroundColor = UIColor.systemRed
-        //Bounds
-        correctButton.layer.cornerRadius = 10
-        correctButton.layer.masksToBounds = true
-
-        pasButton.layer.cornerRadius = 10
-        pasButton.layer.masksToBounds = true
-
-        boomButton.layer.cornerRadius = 10
-        boomButton.layer.masksToBounds = true
-        */
-        //
+        
         
         showRandomTabooWord()
         roundButtons()
@@ -143,6 +128,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         
         
     }
+    
     func updateTourLabel() {
         
         tourLabel.text = "\(currentTour)/\(selectedTour)"
