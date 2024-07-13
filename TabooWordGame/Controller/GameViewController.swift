@@ -66,6 +66,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         super.viewDidLoad()
         
         
+        
         showRandomTabooWord()
         roundButtons()
         startTimer()
@@ -75,7 +76,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     func startNewTour() {
         elapsedTime = 0
         startTime = Date()
-        
+        updatePassButton()
         updateScoreLabel()
         updateTourLabel()
         startTimer()
@@ -191,6 +192,11 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         startTime = Date()
         startTimer()
     }
+    func resetPassButton() {
+        viewModel.passAttempts = 3
+        pasButton.isEnabled = true
+        pasButton.isHidden = false
+    }
     func restartProgress() {
         progressView.progress = 1.0
     }
@@ -254,12 +260,18 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
                 showAlert(title: "Pas Hakkı Kalmadı", message: "Pas hakkınız bitti.")
                 pasButton.isHidden = true
             }
+         updatePassButton()
         }
     }
     func updatePassButton() {
         let remainingAttempts = viewModel.passAttempts
-        pasButton.setTitle("\(remainingAttempts)", for: .normal)
+        //pasButton.setTitle("\(remainingAttempts)", for: .normal)
         
+    }
+    func startNewTurn() {
+        viewModel.passAttempts = 3
+        pasButton.isHidden = false
+        updatePassButton()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

@@ -11,6 +11,7 @@ protocol ScoreViewControllerDelegate: AnyObject {
     func didContinueToNextRound()
     func restartTimer()
     func restartProgress()
+    func resetPassButton()
 }
 
 class ScoreViewController: UIViewController {
@@ -67,12 +68,14 @@ class ScoreViewController: UIViewController {
             delegate?.didContinueToNextRound()
             delegate?.restartTimer()
             delegate?.restartProgress()
+            delegate?.resetPassButton()
             dismiss(animated: true, completion: nil)
         } else {
             self.dismiss(animated: true) {
                 self.delegate?.didContinueToNextRound()
                 self.delegate?.restartTimer()
                 self.delegate?.restartProgress()
+                self.delegate?.resetPassButton()
             }
         }
     }
