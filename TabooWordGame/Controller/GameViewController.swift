@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import GoogleMobileAds
 
 class ViewController: UIViewController, ScoreViewControllerDelegate {
     
@@ -38,6 +39,7 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
     @IBOutlet weak var redScoreLabel: UILabel!
     
     
+    @IBOutlet weak var imageView: UILabel!
     @IBOutlet var tabooWordLabels: [UILabel]!
     
     @IBOutlet weak var correctButton: UIButton!
