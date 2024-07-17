@@ -698,9 +698,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="9Bl-hF-vO0"/>
         <segue reference="rad-Ip-qOb"/>
         <segue reference="Zqi-Tt-aVu"/>
-        <segue reference="jyJ-F2-Nrg"/>
+        <segue reference="fah-n8-GrP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="back2" width="32" height="32"/>
