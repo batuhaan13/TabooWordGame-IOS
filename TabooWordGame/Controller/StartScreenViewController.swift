@@ -11,24 +11,16 @@ class StartScreenViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var howToPlay: UIButton!
+    @IBOutlet weak var tabooWordLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat], animations: {
+            self.tabooWordLabel.frame.origin.y += 50
+        }, completion: nil)
         
-        //startButton.backgroundColor = UIColor.systemPink
-        //howToPlay.backgroundColor = UIColor.systemPink
         
-        //startButton.layer.cornerRadius = 10
-        //startButton.layer.masksToBounds = true
-        
-        //howToPlay.layer.cornerRadius = 10
-       //howToPlay.layer.masksToBounds = true
-        
-        //startButton.layer.shadowColor = UIColor.black.cgColor
-        //startButton.layer.shadowOffset = CGSize(width: 0, height: 2)
-        //startButton.layer.opacity = 0.5
-        //startButton.layer.shadowRadius = 5
     }
     
     
