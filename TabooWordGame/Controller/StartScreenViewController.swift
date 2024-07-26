@@ -16,14 +16,23 @@ class StartScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat], animations: {
-            self.tabooWordLabel.frame.origin.y += 50
-        }, completion: nil)
+        startButton.layer.cornerRadius = 10
+        startButton.clipsToBounds = true
+        
+        howToPlay.layer.cornerRadius = 10
+        howToPlay.clipsToBounds = true
+        
         
         
     }
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+        startLabelAnimation()
+    }
+    func startLabelAnimation() {
+        UIView.animate(withDuration: 1, delay: 0, options: [.autoreverse, .repeat], animations: {
+            self.tabooWordLabel.frame.origin.y += 50
+        }, completion: nil)
+    }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         

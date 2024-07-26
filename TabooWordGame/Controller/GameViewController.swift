@@ -68,6 +68,23 @@ class ViewController: UIViewController, ScoreViewControllerDelegate {
         super.viewDidLoad()
         
         
+        /*
+         if let firstLabel = tabooWordLabels.first {
+            firstLabel.layer.cornerRadius = 10
+            firstLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            firstLabel.clipsToBounds = true
+        }
+         */
+        goalWordLabel.layer.cornerRadius = 10
+        goalWordLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        goalWordLabel.clipsToBounds = true
+        
+        if let lastLabel = tabooWordLabels.last {
+            lastLabel.layer.cornerRadius = 10
+            lastLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+            lastLabel.clipsToBounds = true
+        }
+        
         
         showRandomTabooWord()
         roundButtons()
