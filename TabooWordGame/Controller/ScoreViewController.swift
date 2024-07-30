@@ -34,31 +34,34 @@ class ScoreViewController: UIViewController {
         if let score = score {
             scoreLabel.text = "\(score)"
         }
+        
         if let redScore = redScore {
             redScoreLabel.text = "\(redScore)"
             
             currentLabel.text = showCurrentScore()
         }
-        func showCurrentScore() -> String {
-            guard let score = score, let redScore = redScore else {
-                return "="
-            }
-            if redScore > score {
-                currentScore.text = "Kırmızı Takım önde!"
-                currentScore.textColor = .systemRed
-                return ">"
-            } else if redScore < score {
-                currentScore.text = "Mavi Takım önde!"
-                currentScore.textColor = .tintColor
-                return "<"
-            } else {
-                currentScore.text = "Tur berabere!"
-                currentScore.textColor = .gray
-                return "="
-            }
-        }
-        
+        showCurrentScore()
     }
+    
+    func showCurrentScore() -> String {
+        guard let score = score, let redScore = redScore else {
+            return "="
+        }
+        if redScore > score {
+            currentScore.text = "Kırmızı Takım önde!"
+            currentScore.textColor = .systemRed
+            return ">"
+        } else if redScore < score {
+            currentScore.text = "Mavi Takım önde!"
+            currentScore.textColor = .systemCyan
+            return "<"
+        } else {
+            currentScore.text = "Tur berabere!"
+            currentScore.textColor = .gray
+            return "="
+        }
+    }
+    
     
     
     

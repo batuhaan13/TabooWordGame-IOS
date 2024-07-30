@@ -48,7 +48,7 @@
 		473D5DFA2C184BA600C98250 /* TotalScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScoreViewController.swift; sourceTree = "<group>"; };
 		47A5E3FF2BF39BA500F5A615 /* TimeAndTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAndTourViewController.swift; sourceTree = "<group>"; };
 		47A5E4032BF4A3CC00F5A615 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
-		47B9DD642BD7930600BBF415 /* TabooWordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabooWordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD642BD7930600BBF415 /* Tabuum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabuum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9DD672BD7930600BBF415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47B9DD692BD7930600BBF415 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		47B9DD6B2BD7930600BBF415 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +56,9 @@
 		47B9DD702BD7930900BBF415 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47B9DD732BD7930900BBF415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47B9DD752BD7930900BBF415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabooWordGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD7A2BD7930900BBF415 /* TabuumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabuumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9DD7E2BD7930900BBF415 /* TabooWordGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameTests.swift; sourceTree = "<group>"; };
-		47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabooWordGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47B9DD842BD7930900BBF415 /* TabuumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabuumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B9DD882BD7930900BBF415 /* TabooWordGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITests.swift; sourceTree = "<group>"; };
 		47B9DD8A2BD7930900BBF415 /* TabooWordGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabooWordGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		47B9DD972BD7979700BBF415 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -105,9 +105,9 @@
 		47B9DD652BD7930600BBF415 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47B9DD642BD7930600BBF415 /* TabooWordGame.app */,
-				47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */,
-				47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */,
+				47B9DD642BD7930600BBF415 /* Tabuum.app */,
+				47B9DD7A2BD7930900BBF415 /* TabuumTests.xctest */,
+				47B9DD842BD7930900BBF415 /* TabuumUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47B9DD632BD7930600BBF415 /* TabooWordGame */ = {
+		47B9DD632BD7930600BBF415 /* Tabuum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGame" */;
+			buildConfigurationList = 47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "Tabuum" */;
 			buildPhases = (
 				47B9DD602BD7930600BBF415 /* Sources */,
 				47B9DD612BD7930600BBF415 /* Frameworks */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = TabooWordGame;
+			name = Tabuum;
 			productName = TabooWordGame;
-			productReference = 47B9DD642BD7930600BBF415 /* TabooWordGame.app */;
+			productReference = 47B9DD642BD7930600BBF415 /* Tabuum.app */;
 			productType = "com.apple.product-type.application";
 		};
-		47B9DD792BD7930900BBF415 /* TabooWordGameTests */ = {
+		47B9DD792BD7930900BBF415 /* TabuumTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameTests" */;
+			buildConfigurationList = 47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabuumTests" */;
 			buildPhases = (
 				47B9DD762BD7930900BBF415 /* Sources */,
 				47B9DD772BD7930900BBF415 /* Frameworks */,
@@ -207,14 +207,14 @@
 			dependencies = (
 				47B9DD7C2BD7930900BBF415 /* PBXTargetDependency */,
 			);
-			name = TabooWordGameTests;
+			name = TabuumTests;
 			productName = TabooWordGameTests;
-			productReference = 47B9DD7A2BD7930900BBF415 /* TabooWordGameTests.xctest */;
+			productReference = 47B9DD7A2BD7930900BBF415 /* TabuumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		47B9DD832BD7930900BBF415 /* TabooWordGameUITests */ = {
+		47B9DD832BD7930900BBF415 /* TabuumUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameUITests" */;
+			buildConfigurationList = 47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabuumUITests" */;
 			buildPhases = (
 				47B9DD802BD7930900BBF415 /* Sources */,
 				47B9DD812BD7930900BBF415 /* Frameworks */,
@@ -225,9 +225,9 @@
 			dependencies = (
 				47B9DD862BD7930900BBF415 /* PBXTargetDependency */,
 			);
-			name = TabooWordGameUITests;
+			name = TabuumUITests;
 			productName = TabooWordGameUITests;
-			productReference = 47B9DD842BD7930900BBF415 /* TabooWordGameUITests.xctest */;
+			productReference = 47B9DD842BD7930900BBF415 /* TabuumUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "TabooWordGame" */;
+			buildConfigurationList = 47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "Tabuum" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -266,9 +266,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47B9DD632BD7930600BBF415 /* TabooWordGame */,
-				47B9DD792BD7930900BBF415 /* TabooWordGameTests */,
-				47B9DD832BD7930900BBF415 /* TabooWordGameUITests */,
+				47B9DD632BD7930600BBF415 /* Tabuum */,
+				47B9DD792BD7930900BBF415 /* TabuumTests */,
+				47B9DD832BD7930900BBF415 /* TabuumUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -342,12 +342,12 @@
 /* Begin PBXTargetDependency section */
 		47B9DD7C2BD7930900BBF415 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 47B9DD632BD7930600BBF415 /* TabooWordGame */;
+			target = 47B9DD632BD7930600BBF415 /* Tabuum */;
 			targetProxy = 47B9DD7B2BD7930900BBF415 /* PBXContainerItemProxy */;
 		};
 		47B9DD862BD7930900BBF415 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 47B9DD632BD7930600BBF415 /* TabooWordGame */;
+			target = 47B9DD632BD7930600BBF415 /* Tabuum */;
 			targetProxy = 47B9DD852BD7930900BBF415 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,21 +503,26 @@
 				DEVELOPMENT_TEAM = BX569Z937L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabooWordGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.Tabuum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -531,21 +536,26 @@
 				DEVELOPMENT_TEAM = BX569Z937L;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabooWordGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.TabooWordGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.batuhankasar.Tabuum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -565,7 +575,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabooWordGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TabooWordGame";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tabuum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tabuum";
 			};
 			name = Debug;
 		};
@@ -585,7 +595,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TabooWordGame.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TabooWordGame";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tabuum.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tabuum";
 			};
 			name = Release;
 		};
@@ -628,7 +638,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "TabooWordGame" */ = {
+		47B9DD5F2BD7930600BBF415 /* Build configuration list for PBXProject "Tabuum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B9DD8C2BD7930900BBF415 /* Debug */,
@@ -637,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGame" */ = {
+		47B9DD8E2BD7930900BBF415 /* Build configuration list for PBXNativeTarget "Tabuum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B9DD8F2BD7930900BBF415 /* Debug */,
@@ -646,7 +656,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameTests" */ = {
+		47B9DD912BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabuumTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B9DD922BD7930900BBF415 /* Debug */,
@@ -655,7 +665,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabooWordGameUITests" */ = {
+		47B9DD942BD7930900BBF415 /* Build configuration list for PBXNativeTarget "TabuumUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47B9DD952BD7930900BBF415 /* Debug */,
